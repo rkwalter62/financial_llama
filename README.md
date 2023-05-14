@@ -1,2 +1,2 @@
-# financial_llama
-Repository for Langchain Modules
+# financial-news-llama-index
+financial news analysis with llama index

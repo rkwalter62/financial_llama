@@ -10,15 +10,31 @@ index = load_index_from_storage(storage_context)
 
 # new version of llama index uses query_engine.query()
 query_engine = index.as_query_engine()
-response = query_engine.query("What are some near-term risks to Nvidia?")
-print(response)
+#print to screen what would you like to ask
+while True:
+    print("What would you like to ask?")
+    #accept the resonse into a variable
+    response = input()
+    response = query_engine.query(f"{response} ?")
+    print(response)
+    #print a line break
+    print("--------------------------------------------------")
 
+print("What would you like to ask?")
+#accept the resonse into a variable
+response = input()
+response = query_engine.query(f"{response} ?")
+print(response)
+#print a line break
+print("--------------------------------------------------")
 # questions on current trends
-# response = query_engine.query("What is Microsoft working on in AI?")
-# print(response)
+response = query_engine.query("What is Microsoft working on in AI?")
+print(response)
+print("--------------------------------------------------")
 
 # response = query_engine.query("Tell me about Google's new supercomputer.")
 # print(response)
+print("--------------------------------------------------")
 
 # response = query_engine.query("Why is the price of Taiwan Semiconductor stock dropping?")
 # print(response)
